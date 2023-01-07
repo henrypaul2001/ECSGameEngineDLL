@@ -4,10 +4,10 @@ using System.Linq;
 using System.IO;
 using System.Windows.Forms;
 using OpenTK.Graphics.OpenGL;
-using OpenGL_Game.Managers;
+using EngineDLL.Managers;
 using OpenTK;
 
-namespace OpenGL_Game.OBJLoader
+namespace EngineDLL.OBJLoader
 {
     public class Group
     {

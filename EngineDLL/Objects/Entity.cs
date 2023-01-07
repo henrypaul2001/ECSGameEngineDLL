@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using OpenGL_Game.Components;
+using EngineDLL.Components;
 
-namespace OpenGL_Game.Objects
+namespace EngineDLL.Objects
 {
-    class Entity
+    public class Entity
     {
         string name;
         List<IComponent> componentList = new List<IComponent>();

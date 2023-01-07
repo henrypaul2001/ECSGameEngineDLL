@@ -1,6 +1,6 @@
-﻿using OpenGL_Game.Components;
-using OpenGL_Game.Objects;
-using OpenGL_Game.Systems;
+﻿using EngineDLL.Components;
+using EngineDLL.Objects;
+using EngineDLL.Systems;
 using OpenTK;
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Math;
 
-namespace OpenGL_Game.Engine.Systems
+namespace EngineDLL.Engine.Systems
 {
-    class SystemPathfinding : ISystem
+    public class SystemPathfinding : ISystem
     {
         const ComponentTypes MASK = (ComponentTypes.COMPONENT_POSITION | ComponentTypes.COMPONENT_PATHFINDING);
 

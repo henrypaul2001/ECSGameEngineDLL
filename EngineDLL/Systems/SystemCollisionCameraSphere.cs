@@ -1,15 +1,15 @@
-﻿using OpenGL_Game.Components;
-using OpenGL_Game.Managers;
-using OpenGL_Game.Objects;
+﻿using EngineDLL.Components;
+using EngineDLL.Managers;
+using EngineDLL.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Systems
+namespace EngineDLL.Systems
 {
-    class SystemCollisionCameraSphere : ISystem
+    public class SystemCollisionCameraSphere : ISystem
     {
         const ComponentTypes MASK = (ComponentTypes.COMPONENT_POSITION | ComponentTypes.COMPONENT_COLLISION_SPHERE);
 

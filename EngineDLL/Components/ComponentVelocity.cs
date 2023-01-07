@@ -1,8 +1,8 @@
 ﻿using OpenTK;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentVelocity : IComponent
+    public class ComponentVelocity : IComponent
     {
         Vector3 velocity;
 

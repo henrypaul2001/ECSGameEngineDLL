@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentCollisionSphere : IComponent
+    public class ComponentCollisionSphere : IComponent
     {
         float collisionRadius;
 

@@ -2,15 +2,15 @@
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Input;
-using OpenGL_Game.Scenes;
+using EngineDLL.Scenes;
 using OpenTK.Audio; // NEW for Audio
 using System.Runtime.InteropServices;
 
-namespace OpenGL_Game.Managers
+namespace EngineDLL.Managers
 {
-    abstract class SceneManager : GameWindow
+    public abstract class SceneManager : GameWindow
     {
-        Scene scene;
+        public Scene scene;
         public static int width = 1200, height = 800;
         public static int windowXPos = 200, windowYPos = 80;
 

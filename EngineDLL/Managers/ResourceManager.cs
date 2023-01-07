@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using OpenTK.Graphics.OpenGL;
-using OpenGL_Game.OBJLoader;
+using EngineDLL.OBJLoader;
 using System.IO;
 using OpenTK.Audio.OpenAL;
 
-namespace OpenGL_Game.Managers
+namespace EngineDLL.Managers
 {
-    static class ResourceManager
+    public static class ResourceManager
     {
         static Dictionary<string, Geometry> geometryDictionary = new Dictionary<string, Geometry>();
         static Dictionary<string, int> textureDictionary = new Dictionary<string, int>();

@@ -1,15 +1,15 @@
 ﻿using OpenTK;
 
-namespace OpenGL_Game.Scenes
+namespace EngineDLL.Scenes
 {
-    enum SceneTypes
+    public enum SceneTypes
     {
         SCENE_NONE,
         SCENE_MAIN_MENU,
         SCENE_GAME,
         SCENE_GAME_OVER
     }
-    interface IScene
+    public interface IScene
     {
 
         void Render(FrameEventArgs e);

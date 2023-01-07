@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Engine.Managers
+namespace EngineDLL.Engine.Managers
 {
-    abstract class InputManager
+    public abstract class InputManager
     {
         protected bool[] keysPressed = new bool[255];
 

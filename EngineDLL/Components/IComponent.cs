@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
     [FlagsAttribute]
-    enum ComponentTypes {
+    public enum ComponentTypes {
         COMPONENT_NONE     = 0,
 	    COMPONENT_POSITION = 1 << 0,
         COMPONENT_GEOMETRY = 1 << 1,
@@ -16,7 +16,7 @@ namespace OpenGL_Game.Components
         COMPONENT_PATHFINDING = 1 << 8
     }
 
-    interface IComponent
+    public interface IComponent
     {
         ComponentTypes ComponentType
         {

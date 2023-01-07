@@ -4,9 +4,9 @@ using OpenTK.Graphics.OpenGL;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace OpenGL_Game.Scenes
+namespace EngineDLL.Scenes
 {
-    static class GUI
+    public static class GUI
     {
 
         static private Bitmap textBMP; //The image being drawn

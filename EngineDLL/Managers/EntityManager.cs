@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using OpenGL_Game.Objects;
+using EngineDLL.Objects;
 using System.Diagnostics;
 
-namespace OpenGL_Game.Managers
+namespace EngineDLL.Managers
 {
-    class EntityManager
+    public class EntityManager
     {
         List<Entity> entityList;
 

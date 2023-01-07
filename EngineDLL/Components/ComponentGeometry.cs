@@ -1,9 +1,9 @@
-﻿using OpenGL_Game.Managers;
-using OpenGL_Game.OBJLoader;
+﻿using EngineDLL.Managers;
+using EngineDLL.OBJLoader;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentGeometry : IComponent
+    public class ComponentGeometry : IComponent
     {
         Geometry geometry;
 

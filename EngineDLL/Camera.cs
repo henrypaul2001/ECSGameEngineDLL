@@ -1,9 +1,9 @@
 ﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
 
-namespace OpenGL_Game
+namespace EngineDLL
 {
-    class Camera
+    public class Camera
     {
         public Matrix4 view, projection;
         public Vector3 cameraPosition, cameraDirection, cameraUp, lastPosition;

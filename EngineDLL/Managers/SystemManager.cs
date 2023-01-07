@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using OpenGL_Game.Systems;
-using OpenGL_Game.Objects;
+using EngineDLL.Systems;
+using EngineDLL.Objects;
 
-namespace OpenGL_Game.Managers
+namespace EngineDLL.Managers
 {
-    class SystemManager
+    public class SystemManager
     {
         List<ISystem> systemList = new List<ISystem>();
 

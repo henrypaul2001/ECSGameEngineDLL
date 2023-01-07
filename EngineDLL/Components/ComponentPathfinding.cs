@@ -1,9 +1,9 @@
 ﻿using OpenTK;
 using System.Collections.Generic;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentPathfinding : IComponent
+    public class ComponentPathfinding : IComponent
     {
         List<Vector3> waypoints = new List<Vector3>();
         float moveSpeed;

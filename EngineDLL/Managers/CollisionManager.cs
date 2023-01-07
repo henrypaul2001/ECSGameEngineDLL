@@ -1,13 +1,13 @@
-﻿using OpenGL_Game.Objects;
+﻿using EngineDLL.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Managers
+namespace EngineDLL.Managers
 {
-    enum COLLISIONTYPE
+    public enum COLLISIONTYPE
     {
         CAMERA_SPHERE,
         SPHERE_SPHERE,
@@ -15,14 +15,14 @@ namespace OpenGL_Game.Managers
         LINE_SPHERE
     }
 
-    struct Collision
+    public struct Collision
     {
         public Entity entity;
         public Entity otherEntity;
         public COLLISIONTYPE collisionType;
     }
 
-    abstract class CollisionManager
+    public abstract class CollisionManager
     {
         protected List<Collision> collisionManifold = new List<Collision>();
 

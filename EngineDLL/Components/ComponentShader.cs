@@ -1,12 +1,12 @@
-﻿using OpenGL_Game.Managers;
-using OpenGL_Game.OBJLoader;
+﻿using EngineDLL.Managers;
+using EngineDLL.OBJLoader;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using System;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    abstract class ComponentShader : IComponent
+    public abstract class ComponentShader : IComponent
     {
         protected Camera camera;
         public int pgmID;

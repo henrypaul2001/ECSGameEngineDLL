@@ -1,13 +1,13 @@
-﻿using OpenGL_Game.Managers;
-using OpenGL_Game.OBJLoader;
+﻿using EngineDLL.Managers;
+using EngineDLL.OBJLoader;
 using OpenTK;
 using OpenTK.Audio.OpenAL;
 using System;
 using System.Diagnostics;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentAudio : IComponent
+    public class ComponentAudio : IComponent
     {
         Vector3 sourcePosition;
         int audioBuffer;

@@ -1,8 +1,8 @@
-﻿using OpenGL_Game.Managers;
+﻿using EngineDLL.Managers;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentTexture : IComponent
+    public class ComponentTexture : IComponent
     {
         int texture;
 

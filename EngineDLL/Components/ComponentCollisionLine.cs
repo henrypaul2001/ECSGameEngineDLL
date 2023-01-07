@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentCollisionLine : IComponent
+    public class ComponentCollisionLine : IComponent
     {
         Vector3 lineStart;
         Vector3 lineEnd;

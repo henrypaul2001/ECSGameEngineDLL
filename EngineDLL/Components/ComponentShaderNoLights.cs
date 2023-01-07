@@ -1,5 +1,5 @@
-﻿using OpenGL_Game.OBJLoader;
-using OpenGL_Game.Scenes;
+﻿using EngineDLL.OBJLoader;
+using EngineDLL.Scenes;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using System;
@@ -8,16 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Components
+namespace EngineDLL.Components
 {
-    class ComponentShaderNoLights : ComponentShader
+    public class ComponentShaderNoLights : ComponentShader
     {
         public int uniform_stex;
         public int uniform_mmodelviewproj;
         public int uniform_mmodel;
         public int uniform_diffuse;
 
-        public ComponentShaderNoLights(Camera camera) : base("Engine/Shaders/vs.glsl", "Engine/Shaders/fs_nolights.glsl", camera)
+        public ComponentShaderNoLights(Camera camera) : base("Game/Shaders/vs.glsl", "Game/Shaders/fs_nolights.glsl", camera)
         {
             uniform_stex = GL.GetUniformLocation(pgmID, "s_texture");
             uniform_mmodelviewproj = GL.GetUniformLocation(pgmID, "ModelViewProjMat");

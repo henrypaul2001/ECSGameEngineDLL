@@ -1,9 +1,9 @@
 ﻿using OpenTK;
-using OpenGL_Game.Managers;
+using EngineDLL.Managers;
 
-namespace OpenGL_Game.Scenes
+namespace EngineDLL.Scenes
 {
-    abstract class Scene : IScene
+    public abstract class Scene : IScene
     {
         protected SceneManager sceneManager;
 

@@ -1,7 +1,7 @@
-﻿using OpenGL_Game.Components;
-using OpenGL_Game.Managers;
-using OpenGL_Game.Objects;
-using OpenGL_Game.Systems;
+﻿using EngineDLL.Components;
+using EngineDLL.Managers;
+using EngineDLL.Objects;
+using EngineDLL.Systems;
 using OpenTK;
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenGL_Game.Engine.Systems
+namespace EngineDLL.Engine.Systems
 {
-    class SystemCollisionLineSphere : ISystem
+    public class SystemCollisionLineSphere : ISystem
     {
         const ComponentTypes LINE_MASK = (ComponentTypes.COMPONENT_POSITION | ComponentTypes.COMPONENT_COLLISION_LINE);
         const ComponentTypes SPHERE_MASK = (ComponentTypes.COMPONENT_POSITION | ComponentTypes.COMPONENT_COLLISION_SPHERE);

@@ -1,8 +1,8 @@
-﻿using OpenGL_Game.Objects;
+﻿using EngineDLL.Objects;
 
-namespace OpenGL_Game.Systems
+namespace EngineDLL.Systems
 {
-    interface ISystem
+    public interface ISystem
     {
         void OnAction(Entity entity);
 

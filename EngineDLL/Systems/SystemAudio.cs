@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
-using OpenGL_Game.Components;
-using OpenGL_Game.OBJLoader;
-using OpenGL_Game.Objects;
-using OpenGL_Game.Scenes;
+using EngineDLL.Components;
+using EngineDLL.OBJLoader;
+using EngineDLL.Objects;
+using EngineDLL.Scenes;
 
-namespace OpenGL_Game.Systems
+namespace EngineDLL.Systems
 {
-    class SystemAudio : ISystem
+    public class SystemAudio : ISystem
     {
         const ComponentTypes MASK = (ComponentTypes.COMPONENT_POSITION | ComponentTypes.COMPONENT_AUDIO);
 
