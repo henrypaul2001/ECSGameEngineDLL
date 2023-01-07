@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A493A10-65E1-44E9-ACAB-F4C02D711181}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EngineDLL</RootNamespace>
+    <AssemblyName>EngineDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=3.2.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.3.2\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="Components\ComponentAudio.cs" />
+    <Compile Include="Components\ComponentCollisionLine.cs" />
+    <Compile Include="Components\ComponentCollisionSphere.cs" />
+    <Compile Include="Components\ComponentGeometry.cs" />
+    <Compile Include="Components\ComponentPathfinding.cs" />
+    <Compile Include="Components\ComponentPosition.cs" />
+    <Compile Include="Components\ComponentShader.cs" />
+    <Compile Include="Components\ComponentShaderDefault.cs" />
+    <Compile Include="Components\ComponentShaderNoLights.cs" />
+    <Compile Include="Components\ComponentTexture.cs" />
+    <Compile Include="Components\ComponentVelocity.cs" />
+    <Compile Include="Components\IComponent.cs" />
+    <Compile Include="Managers\CollisionManager.cs" />
+    <Compile Include="Managers\EntityManager.cs" />
+    <Compile Include="Managers\InputManager.cs" />
+    <Compile Include="Managers\ResourceManager.cs" />
+    <Compile Include="Managers\SceneManager.cs" />
+    <Compile Include="Managers\SystemManager.cs" />
+    <Compile Include="Objects\Entity.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Common\StringExtensions.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\DataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IDataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IElementGroup.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IFaceGroup.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IGroupDataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IMaterialLibrary.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\INormalDataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\ITextureDataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\DataStore\IVertexDataStore.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\Elements\Face.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\Elements\Group.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\Material.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\Vec3.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\VertexData\Normal.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\VertexData\Texture.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Data\VertexData\Vertex.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\IMaterialLibraryLoader.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\IMaterialLibraryLoaderFacade.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\IObjLoader.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\IObjLoaderFactory.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\LoaderBase.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\LoadResult.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\MaterialLibraryLoader.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\MaterialLibraryLoaderFacade.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\MaterialStreamProvider.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\ObjLoader.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\Loaders\ObjLoaderFactory.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\FaceParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\GroupParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\IFaceParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\IGroupParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\IMaterialLibraryParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\INormalParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\ITextureParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\ITypeParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\IUseMaterialParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\Interfaces\IVertexParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\MaterialLibraryParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\NormalParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\TextureParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\TypeParserBase.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\UseMaterialParser.cs" />
+    <Compile Include="OBJLoader\CjClutter.ObjLoader.Loader\TypeParsers\VertexParser.cs" />
+    <Compile Include="OBJLoader\Geometry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenes\GUI.cs" />
+    <Compile Include="Scenes\IScene.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Systems\ISystem.cs" />
+    <Compile Include="Systems\SystemAudio.cs" />
+    <Compile Include="Systems\SystemCollisionCameraLine.cs" />
+    <Compile Include="Systems\SystemCollisionCameraSphere.cs" />
+    <Compile Include="Systems\SystemCollisionEntitySphere.cs" />
+    <Compile Include="Systems\SystemCollisionLineSphere.cs" />
+    <Compile Include="Systems\SystemPathfinding.cs" />
+    <Compile Include="Systems\SystemPhysics.cs" />
+    <Compile Include="Systems\SystemRender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Shaders\fs.glsl" />
+    <None Include="Shaders\fs_nolights.glsl" />
+    <None Include="Shaders\vs.glsl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\openal.redist.2.0.7.0\build\net45\openal.redist.targets" Condition="Exists('..\packages\openal.redist.2.0.7.0\build\net45\openal.redist.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\openal.redist.2.0.7.0\build\net45\openal.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\openal.redist.2.0.7.0\build\net45\openal.redist.targets'))" />
+  </Target>
+</Project>
